@@ -1,9 +1,11 @@
-from dragonfly import Key, Text, Paste, MappingRule
+from dragonfly import Key, Text, Paste, MappingRule, Dictation, Function
 
 from caster.lib import control
 from caster.lib.ccr.standard import SymbolSpecs
-from caster.lib.dfplus.merge.mergerule import MergeRule
+from caster.lib.dfplus.merge.mergerule import MergeRule, TokenSet
 from caster.lib.dfplus.state.short import R
+
+from caster.lib import textformat
 
 
 class JavaNon(MappingRule):
@@ -18,6 +20,7 @@ class JavaNon(MappingRule):
     ncdefaults = {}
 
 class Java(MergeRule):
+    auto = [".java"]
     non = JavaNon
         
     mapping = {
@@ -98,10 +101,99 @@ class Java(MergeRule):
         
         "character at":                     R(Text("charAt"), rdescript="Java: Character At Method"),
         "is instance of":                   R(Text(" instanceof "), rdescript="Java: Instance Of"),
-          
+		
+		"short":							R(Text("short "), rdescript="Java: short value type"),
+		"library Java utilities":			R(Text("import java.util.*"), rdescript="Java: import utilities library"),
+		"main method":						R(Text("public static void main(String args[]){}") + Key("left:1") + Key("enter:3") + Key("up:1") + Key("tab"), rdescript="Java: write out a main method"),
+		
+		# "(encapsulated | encapsulate) word [<text>]": R(Text("public String get" +\
+															# textformat.prior_text_format("%(text)s") +\
+															# "(){}"
+															# ) +\
+													# Key("left") + \ 
+													# Key("enter") + \
+													# Key("tab") + \
+													# Text("return" + \
+														# Function(textformat.prior_text_format("%(text)s")) + \
+														# ";"
+														# ) + \
+													# Key("enter") + \
+													# Key("right") + \
+													# Key("enter:2") + \
+													# Text("public String get" + \
+														# Function(textformat.prior_text_format("%(text)s")) + \
+														# "(String "+ \
+														# Function(textformat.prior_text_format("%(text)s")) + \
+														# "){}"
+														# ) + \
+													# Key("left") + \
+													# Key("enter") + \
+													# Key("tab") + \
+													# Text("this." + \
+															# Function(textformat.prior_text_format("%(text)s")) + \
+															# ";"
+															# ) + \
+													# Key("enter") + \ 
+													# Key("right") + \ 
+													# Key("enter:2")
+													# , rdescript="Java: encapsulate string variable"
+													# )
+													
+		# "(encapsulated | encapsulate) word [<text>]": R(Text("public String get" + Function(textformat.prior_text_format("%(text)s")) + "(){}") +\
+													# Key("left") + Key("enter") + Key("tab") + \
+													# Text("return" + Function(textformat.prior_text_format("%(text)s")) + ";") + \
+													# Key("enter") + Key("right") + Key("enter:2") + \
+													# Text("(String " + Function(textformat.prior_text_format("%(text)s")) + "){}") + \
+													# Key("left") + Key("enter") + Key("tab") + \
+													# Text("this." + Function(textformat.prior_text_format("%(text)s")) + ";") + \
+													# Key("enter") + Key("right") + Key("enter:2"), 
+													# rdescript="Java: encapsulate string variable")
+        
+		"(encapsulated | encapsulate) word [<text>]": R(Text("public String get" + str(textformat.prior_text_format("%(text)s")) + "(){}") +\
+													Key("left") + Key("enter") + Key("tab") + \
+													Text("return" + str(textformat.prior_text_format("%(text)s")) + ";") + \
+													Key("enter") + Key("right") + Key("enter:2") + \
+													Text("public String set" + str(textformat.prior_text_format("%(text)s"))) + \
+													Text("(String " + str(textformat.prior_text_format("%(text)s")) + "){}") + \
+													Key("left") + Key("enter") + Key("tab") + \
+													Text("this." + str(textformat.prior_text_format("%(text)s")) + " = " + str(textformat.prior_text_format("%(text)s")) + ";") + \
+													Key("enter") + Key("right") + Key("enter:2"), 
+													rdescript="Java: encapsulate string variable")
+													
+		# "(encapsulated | encapsulate) word [<text>]": R(Text("public String get" + str(textformat.get_formatted_text(2,1,"%(text)s")) + "(){}") +\
+													# Key("left") + Key("enter") + Key("tab") + \
+													# Text("return" + str(textformat.get_formatted_text(3,1,"%(text)s")) + ";") + \
+													# Key("enter") + Key("right") + Key("enter:2") + \
+													# Text("public String set" + str(textformat.get_formatted_text(2,1,"%(text)s")) ) + \
+													# Text("(String " + str(textformat.get_formatted_text(2,1,"%(text)s")) + "){}") + \
+													# Key("left") + Key("enter") + Key("tab") + \
+													# Text("this." + str(textformat.get_formatted_text(3,1,"%(text)s")) + " = " + str(textformat.get_formatted_text(3,1,"%(text)s")) + ";") + \
+													# Key("enter") + Key("right") + Key("enter:2"), 
+													# rdescript="Java: encapsulate string variable")
+													
     }
 
-    extras   = []
-    defaults = {}
+    extras   = [
+		Dictation("text"),
+		]
+    defaults = {
+		"text": ""
+		}
+    
+    token_set = TokenSet(["abstract", "continue", "for", "new", "switch", "assert",
+                 "default", "goto", "package", "synchronized", "boolean",
+                 "do", "if", "private", "this", "break", "double",
+                 "implements", "protected", "throw", "byte", "else",
+                 "import", "public", "throws", "case", "enum",
+                 "instanceof", "return", "transient", "catch", "extends",
+                 "int", "short", "try", "char", "final", "interface",
+                 "static", "void", "class", "finally", "long", "strictfp",
+                 "volatile", "const", "float", "native", "super", "while"], 
+                         "//", 
+                         ["/*", "*/"])
+
+
+
+
 
 control.nexus().merger.add_global_rule(Java())
