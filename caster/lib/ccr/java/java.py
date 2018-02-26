@@ -2,7 +2,7 @@ from dragonfly import Key, Text, Paste, MappingRule, Dictation, Function
 
 from caster.lib import control
 from caster.lib.ccr.standard import SymbolSpecs
-from caster.lib.dfplus.merge.mergerule import MergeRule, TokenSet
+from caster.lib.dfplus.merge.mergerule import MergeRule
 from caster.lib.dfplus.state.short import R
 
 from caster.lib import textformat
@@ -180,17 +180,7 @@ class Java(MergeRule):
 		"text": ""
 		}
     
-    token_set = TokenSet(["abstract", "continue", "for", "new", "switch", "assert",
-                 "default", "goto", "package", "synchronized", "boolean",
-                 "do", "if", "private", "this", "break", "double",
-                 "implements", "protected", "throw", "byte", "else",
-                 "import", "public", "throws", "case", "enum",
-                 "instanceof", "return", "transient", "catch", "extends",
-                 "int", "short", "try", "char", "final", "interface",
-                 "static", "void", "class", "finally", "long", "strictfp",
-                 "volatile", "const", "float", "native", "super", "while"], 
-                         "//", 
-                         ["/*", "*/"])
+    
 
 
 
