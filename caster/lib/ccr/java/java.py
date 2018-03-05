@@ -24,8 +24,8 @@ class Java(MergeRule):
     non = JavaNon
         
     mapping = {
-        SymbolSpecs.IF:                     R(Text("if() {")+Key("enter,up,left"), rdescript="Java: If"),
-        SymbolSpecs.ELSE:                   R(Text("else {")+Key("enter"), rdescript="Java: Else"),        
+        SymbolSpecs.IF:                     R(Text("if() {}")+Key("left,enter,up,left"), rdescript="Java: If"),
+        SymbolSpecs.ELSE:                   R(Text("else {}")+Key("left,enter"), rdescript="Java: Else"),        
         #
         SymbolSpecs.SWITCH:                 R(Text("switch(){\ncase : break;\ndefault: break;")+Key("up,up,left,left"), rdescript="Java: Switch"),
         SymbolSpecs.CASE:                   R(Text("case :")+Key("left"), rdescript="Java: Case"),
