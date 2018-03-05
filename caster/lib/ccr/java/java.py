@@ -105,6 +105,7 @@ class Java(MergeRule):
 		"short":							R(Text("short "), rdescript="Java: short value type"),
 		"library Java utilities":			R(Text("import java.util.*"), rdescript="Java: import utilities library"),
 		"main method":						R(Text("public static void main(String args[]){}") + Key("left:1") + Key("enter:3") + Key("up:1") + Key("tab"), rdescript="Java: write out a main method"),
+		"override":							R(Text("@Override") + Key("enter"), rdescript="Java: override"),
 		
 		# "(encapsulated | encapsulate) word [<text>]": R(Text("public String get" +\
 															# textformat.prior_text_format("%(text)s") +\
