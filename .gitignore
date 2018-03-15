@@ -10,6 +10,7 @@ complexity_report*
 *.log
 *.*\#
 *.*~
+*.exe
 
 
 # Ignore Natlink
