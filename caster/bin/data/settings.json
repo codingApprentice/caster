@@ -1,5 +1,6 @@
 {
     "apps": {
+        "PotPlayerMini64": true, 
         "atom": true, 
         "chrome": true, 
         "cmd": true, 
@@ -15,6 +16,8 @@
         "jetbrains": true, 
         "kdiff3": true, 
         "legion": true, 
+        "minnty": true, 
+        "mintty": true, 
         "msvc": true, 
         "notepadplusplus": true, 
         "rainbow": true, 

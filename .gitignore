@@ -2,6 +2,7 @@
 .idea/
 *.pyc
 # *.json
+/caster/bin/data/clipboard.json
 *.wav
 *.class
 test.py
