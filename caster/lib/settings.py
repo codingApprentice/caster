@@ -113,6 +113,7 @@ _DEFAULT_SETTINGS = {
         "sublime": True,
         "visualstudio": True,
         "winword": True,
+		"wish": True,
         "wsr": True,
     },
 

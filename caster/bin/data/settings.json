@@ -26,6 +26,7 @@
         "sublime": true, 
         "visualstudio": true, 
         "winword": true, 
+        "wish": true, 
         "wsr": true
     }, 
     "feature_rules": {
