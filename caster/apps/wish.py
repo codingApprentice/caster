@@ -23,7 +23,7 @@ class WishRule(MergeRule):
     pronunciation = "wish"
 
     mapping = {
-        "my ticket":   R(Text("71955fc51ee30fb3c881cc48b0ff11eded85471e")+Key("enter"), rdescript="Wish: my git token or ticket"),
+        "my ticket":   R(Text("")+Key("enter"), rdescript="Wish: my git token or ticket"),
         
         }
     extras = [
