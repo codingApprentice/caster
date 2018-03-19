@@ -12,6 +12,7 @@ complexity_report*
 *.*\#
 *.*~
 *.exe
+/caster/apps/wish.py
 
 
 # Ignore Natlink
