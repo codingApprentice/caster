@@ -36,7 +36,7 @@ class PotPlayerRule(MergeRule):
         "silence [the] video":  R(Text("m"), rdescript="PotPlayer: mute the volume"),
 		#screen size
 		"[toggle] fullscreen":  R(Key("a-enter"), rdescript="PotPlayer: toggle full screen"),
-		"minimise window":  R(Text(r"`"), rdescript="PotPlayer: minimise window"),
+		"minimise window":  R(Key("escape"), rdescript="PotPlayer: minimise window"),
 		#jump to
 		"beginning":  R(Key("backspace"), rdescript="PotPlayer: go to the start of video"),
 		"middle":  R(Key("c-backspace"), rdescript="PotPlayer: go to the middle of video"),

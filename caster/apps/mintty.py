@@ -30,7 +30,9 @@ class CMDRule(MergeRule):
         "make directory":   R(Text( "mkdir " ), rdescript="git bash: Make directory"),
         
         "open Jpractice":   R(Text(r"cd /e/GitHub/javaPractice")+Key("enter"), rdescript="git bash: Go To javaPractice"),
+		"open my website":   R(Text(r"cd /e/GitHub/codingApprentice.github.io")+Key("enter"), rdescript="git bash: Go To javaPractice"),
 		"open macro system":   R(Text(r"cd /c/NatLink/NatLink/MacroSystem")+Key("enter"), rdescript="git bash: Go To MacroSystem"),
+		
 		
 		#github commands
 		"push origin master": R(Text("git push origin master")+Key("enter"), rdescript="git bash: Go To C:"),
