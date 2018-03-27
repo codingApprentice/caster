@@ -82,7 +82,7 @@
         "SAVED_CLIPBOARD_PATH": "C:/NatLink/NatLink/MacroSystem/caster/bin/data/clipboard.json", 
         "SETTINGS_PATH": "C:/NatLink/NatLink/MacroSystem/caster/bin/data/settings.json", 
         "SETTINGS_WINDOW_PATH": "C:/NatLink/NatLink/MacroSystem/caster/asynch/settingswindow.py", 
-        "SIKULI_COMPATIBLE_JAVA_EXE_PATH": "C:/Program Files/Java/jdk1.8.0_141/java.exe", 
+        "SIKULI_COMPATIBLE_JAVA_EXE_PATH": "C:/Program Files/Java/jdk1.8.0_141/bin/java.exe", 
         "SIKULI_IDE_JAR_PATH": "C:/SikuliX/sikulix.jar", 
         "SIKULI_SCRIPTS_FOLDER_PATH": "C:/NatLink/NatLink/MacroSystem/caster/asynch/sikuli/scripts", 
         "SIKULI_SCRIPTS_JAR_PATH": "C:/SikuliX/sikulix.jar", 
