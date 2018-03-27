@@ -36,10 +36,12 @@ class CMDRule(MergeRule):
 		
 		#github commands
 		"push origin master": R(Text("git push origin master")+Key("enter"), rdescript="git bash: Go To C:"),
-		"my username":          R(Text("codingApprentice")+Key("enter"), rdescript="git bash: username"),
-		"check status":          R(Text("git status")+Key("enter"), rdescript="git bash: check git status"),
-		"add all files":          R(Text(r"git add -A")+Key("enter"), rdescript="git bash: add all files to commit"),
-		"submit a commit":          R(Text(r"git commit -m ''")+Key("left"), rdescript="git bash: submit a commit with a message"), 
+		"my username":      R(Text("codingApprentice")+Key("enter"), rdescript="git bash: username"),
+		"check status":     R(Text("git status")+Key("enter"), rdescript="git bash: check git status"),
+		"add all files":    R(Text(r"git add -A")+Key("enter"), rdescript="git bash: add all files to commit"),
+		"submit a commit":  R(Text(r"git commit -m ''")+Key("left"), rdescript="git bash: submit a commit with a message"), 
+		"check out new branch":  R(Text(r"git checkout -b "), rdescript="git bash: checkout a new branch"), 
+		
         
         "exit":             R(Text( "exit" )+Key("enter"), rdescript="git bash: Exit"),
         }
