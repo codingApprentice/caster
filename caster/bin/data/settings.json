@@ -47,7 +47,7 @@
         "max_ccr_repetitions": 16, 
         "print_rdescripts": false, 
         "rdp_mode": false, 
-        "sikuli_enabled": false
+        "sikuli_enabled": true
     }, 
     "nodes": {}, 
     "one time warnings": {
