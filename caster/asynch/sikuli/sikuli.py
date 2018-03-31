@@ -76,10 +76,10 @@ def refresh(_NEXUS):
         refresh(_NEXUS)
     
     mapping = {
-        "launch sick IDE":           Function(launch_IDE),
-        "launch sick server":        Function(launch_server),
-        "refresh sick you Lee":      Function(refresh_sick_command),
-        "sick shot":                 Key("cs-2"),
+        "launch (sick | six | Sikuli) IDE":           Function(launch_IDE),
+        "launch (sick | six | Sikuli) server":        Function(launch_server),
+        "refresh (sick you Lee | Sikuli)":      Function(refresh_sick_command),
+        "(sick you Lee | Sikuli) shot":                 Key("cs-2"),
     }
     
     rule = MergeRule(name="sik", mapping=mapping)
