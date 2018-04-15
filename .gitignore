@@ -14,6 +14,12 @@ complexity_report*
 *.exe
 /caster/apps/wish.py
 
+# Ignore Rope
+.ropeproject/
+
+# Ignoring Visual Studio (Code)
+.vs/
+.vscode/
 
 # Ignore Natlink
 /core/
