@@ -11,10 +11,12 @@
         "Javascript": false, 
         "Python": false, 
         "Rust": false, 
+        "VHDL": false, 
         "alphabet": true, 
         "hacks": false, 
         "navigation": true, 
         "numbers": true, 
+        "prolog": false, 
         "punctuation": true, 
         "sequel": false
     }, 

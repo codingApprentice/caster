@@ -13,6 +13,7 @@
         "flashdevelop": true, 
         "foxitreader": true, 
         "gitbash": true, 
+        "gitter": true, 
         "jetbrains": true, 
         "kdiff3": true, 
         "legion": true, 
@@ -25,6 +26,7 @@
         "ssms": true, 
         "sublime": true, 
         "visualstudio": true, 
+        "visualstudiocode": true, 
         "winword": true, 
         "wish": true, 
         "wsr": true
