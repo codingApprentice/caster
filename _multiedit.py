@@ -85,10 +85,12 @@ release = Key("shift:up, ctrl:up")
 config = Config("multi edit")
 config.cmd = Section("Language section")
 config.cmd.map = Item(
+
     # Here we define the *default* command map.  If you would like to
     #  modify it to your personal taste, please *do not* make changes
     #  here.  Instead change the *config file* called "_multiedit.txt".
     {
+
         # Spoken-form    ->    ->    ->     Action object
         "up [<n>]": Key("up:%(n)d"),
         "down [<n>]": Key("down:%(n)d"),
@@ -127,6 +129,7 @@ config.cmd.map = Item(
         "Key": Key,
         "Text": Text,
     })
+
 namespace = config.load()
 
 #---------------------------------------------------------------------------
@@ -137,6 +140,7 @@ namespace = config.load()
 format_functions = {}
 if namespace:
     for name, function in namespace.items():
+
         if name.startswith("format_") and callable(function):
             spoken_form = function.__doc__.strip()
 
@@ -195,6 +199,7 @@ class KeystrokeRule(MappingRule):
     defaults = {
         "n": 1,
     }
+
     # Note: when processing a recognition, the *value* of
     #  this rule will be an action object from the right side
     #  of the mapping given above.  This is default behavior
@@ -237,6 +242,7 @@ sequence = Repetition(single_action, min=1, max=16, name="sequence")
 class RepeatRule(CompoundRule):
 
     # Here we define this rule's spoken-form and special elements.
+
     spec = "<sequence> [[[and] repeat [that]] <n> times]"
     extras = [
         sequence,  # Sequence of actions defined above.
@@ -253,8 +259,10 @@ class RepeatRule(CompoundRule):
     #     . extras["sequence"] gives the sequence of actions.
     #     . extras["n"] gives the repeat count.
     def _process_recognition(self, node, extras):
+
         sequence = extras["sequence"]  # A sequence of actions.
         count = extras["n"]  # An integer repeat count.
+
         for i in range(count):
             for action in sequence:
                 action.execute()

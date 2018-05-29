@@ -1,0 +1,27 @@
+{
+    "app": {
+        "flash develop test": true
+    }, 
+    "global": {
+        "Bash": false, 
+        "C plus plus": false, 
+        "C sharp": false, 
+        "HTML": false, 
+        "Java": false, 
+        "Javascript": true, 
+        "Python": false, 
+        "Rust": false, 
+        "VHDL": false, 
+        "alphabet": true, 
+        "hacks": false, 
+        "navigation": true, 
+        "numbers": true, 
+        "prolog": false, 
+        "punctuation": true, 
+        "sequel": false
+    }, 
+    "selfmod": {
+        "chain alias": false, 
+        "history": true
+    }
+}
