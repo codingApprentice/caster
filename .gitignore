@@ -1,8 +1,12 @@
 # Ignore junk
 .idea/
 *.pyc
-# *.json
+#*.json
+/caster/bin/data/aliases.json
+/caster/bin/data/ccr.json
 /caster/bin/data/clipboard.json
+/caster/bin/data/recorded_macros.json
+#/caster/bin/data/settings.json
 *.wav
 *.class
 test.py
@@ -28,7 +32,7 @@ complexity_report*
 /caster/user
 
 # Ignore Custom Sikuli Scripts
-# /caster/asynch/sikuli/scripts
+/caster/asynch/sikuli/scripts
 
 # Ignore SonarQube
 .sonar
