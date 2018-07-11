@@ -8,7 +8,7 @@
         "C sharp": false, 
         "HTML": false, 
         "Java": false, 
-        "Javascript": true, 
+        "Javascript": false, 
         "Python": false, 
         "Rust": false, 
         "VHDL": false, 
