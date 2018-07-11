@@ -22,6 +22,7 @@
     }, 
     "selfmod": {
         "chain alias": false, 
-        "history": true
+        "history": true, 
+        "vanilla alias": false
     }
 }
