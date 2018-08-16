@@ -45,7 +45,8 @@ if STARTING_PROJECT_ROOT == '':
 _configuration = {
     'project_root': STARTING_PROJECT_ROOT,
     'host': 'localhost',
-    'port': 8240,
+	#'host': '192.168.56.1',
+    'port': 8241,
     'platform': 'proxy',
     'use_multiple_actions': True,
     'screen_resolution': [1920, 1080],
