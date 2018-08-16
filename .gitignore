@@ -39,5 +39,5 @@ complexity_report*
 sonar-project.properties
 
 # Ignore Aenea
-aenea/
-aenea.json
+#aenea/
+#aenea.json
