@@ -1,0 +1,30 @@
+[app]
+"flash develop test" = true
+
+[global]
+latex = false
+sequel = false
+Java = false
+VHDL = false
+Python = false
+alphabet = true
+punctuation = true
+prolog = false
+Dart = false
+Rust = false
+Javascript = false
+HTML = false
+"C plus plus" = false
+numbers = true
+Go = false
+"C sharp" = false
+hacks = false
+navigation = true
+matlab = false
+Bash = false
+are = false
+
+[selfmod]
+alias = true
+"chain alias" = true
+history = true

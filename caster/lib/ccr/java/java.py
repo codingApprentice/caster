@@ -216,16 +216,16 @@ class Java(MergeRule):
              # Key("enter") + Key("right") + Key("enter:2"),
              # rdescript="Java: encapsulate string variable")
 
-        "(encapsulated | encapsulate) word [<text>]": R(Text("public String get" + str(textformat.prior_text_format("%(text)s")) + "(){}") +\
-             Key("left") + Key("enter") + Key("tab") + \
-             Text("return" + str(textformat.prior_text_format("%(text)s")) + ";") + \
-             Key("enter") + Key("right") + Key("enter:2") + \
-             Text("public String set" + str(textformat.prior_text_format("%(text)s"))) + \
-             Text("(String " + str(textformat.prior_text_format("%(text)s")) + "){}") + \
-             Key("left") + Key("enter") + Key("tab") + \
-             Text("this." + str(textformat.prior_text_format("%(text)s")) + " = " + str(textformat.prior_text_format("%(text)s")) + ";") + \
-             Key("enter") + Key("right") + Key("enter:2"),
-             rdescript="Java: encapsulate string variable")
+        # "(encapsulated | encapsulate) word [<text>]": R(Text("public String get" + str(textformat.prior_text_format("%(text)s")) + "(){}") +\
+             # Key("left") + Key("enter") + Key("tab") + \
+             # Text("return" + str(textformat.prior_text_format("%(text)s")) + ";") + \
+             # Key("enter") + Key("right") + Key("enter:2") + \
+             # Text("public String set" + str(textformat.prior_text_format("%(text)s"))) + \
+             # Text("(String " + str(textformat.prior_text_format("%(text)s")) + "){}") + \
+             # Key("left") + Key("enter") + Key("tab") + \
+             # Text("this." + str(textformat.prior_text_format("%(text)s")) + " = " + str(textformat.prior_text_format("%(text)s")) + ";") + \
+             # Key("enter") + Key("right") + Key("enter:2"),
+             # rdescript="Java: encapsulate string variable")
 
              # "(encapsulated | encapsulate) word [<text>]": R(Text("public String get" + str(textformat.get_formatted_text(2,1,"%(text)s")) + "(){}") +\
              # Key("left") + Key("enter") + Key("tab") + \

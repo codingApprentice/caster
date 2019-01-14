@@ -3,7 +3,7 @@ from dragonfly import Key, Text, Dictation
 
 
 from caster.lib import control
-from caster.lib.actions import Key, Text, Dictation
+from caster.lib.actions import Key, Text #, Dictation
 from caster.lib.dfplus.merge.mergerule import MergeRule
 
 
@@ -69,25 +69,15 @@ class HTML(MergeRule):
         "H 5 | heading five":
             Text("<h5>") + Key("enter") + Key("up") + Key("end") + Key("enter"),
         "H 6 | heading six":
-<<<<<<< HEAD
             Text("<h6>") + Key("enter") + Key("up") + Key("end") + Key("enter"),
         "isolate ":
             Text("<bdi>") + Key("enter") + Key("up") + Key("end") + Key("enter"),
-=======
-            Text("<h6></h6>") + Key("left/10:5"),
->>>>>>> develop
         "H group | headings group":
             Text("<hgroup>") + Key("enter") + Key("up") + Key("end") + Key("enter"),
         "navigation | navigate":
-<<<<<<< HEAD
             Text("<nav>") + Key("enter") + Key("up") + Key("end") + Key("enter"),
         "section":
             Text("<section>") + Key("enter") + Key("up") + Key("end") + Key("enter"),
-=======
-            Text("<nav>") + Key("enter") + Text("</nav>") + Key("up"),
-        "section":
-            Text("<section>") + Key("enter") + Text("</section>") + Key("up"),
->>>>>>> develop
         #Text content
         "description | DD":
             Text("<dd>"),
@@ -102,11 +92,7 @@ class HTML(MergeRule):
         "H are | HR":
             Text("<hr>"),
         "list item | LI":
-<<<<<<< HEAD
             Text("<li>") + Key("enter") + Key("up") + Key("end") + Key("enter"),
-=======
-            Text("<li></li>") + Key("left/10:5"),
->>>>>>> develop
         "main":
             Text("<main>") + Key("enter") + Key("up") + Key("end") + Key("enter"),
         "ordered list | OL":
