@@ -1,12 +1,16 @@
 # Ignore junk
 .idea/
 *.pyc
+
 #*.json
 /caster/bin/data/aliases.json
 /caster/bin/data/ccr.json
 /caster/bin/data/clipboard.json
 /caster/bin/data/recorded_macros.json
 #/caster/bin/data/settings.json
+
+*.toml
+
 *.wav
 *.class
 test.py
@@ -41,3 +45,12 @@ sonar-project.properties
 # Ignore Aenea
 #aenea/
 #aenea.json
+
+# Ignore Eclipse/Pydev Files
+.project
+.pydevproject
+.settings
+
+# Ignore User Data
+caster/bin/data
+

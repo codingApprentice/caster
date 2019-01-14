@@ -1,6 +1,9 @@
+
 from dragonfly import Key, Text, Paste, MappingRule, Dictation, Function
 
+
 from caster.lib import control
+from caster.lib.actions import Key, Text
 from caster.lib.ccr.standard import SymbolSpecs
 from caster.lib.dfplus.merge.mergerule import MergeRule
 from caster.lib.dfplus.state.short import R
@@ -82,9 +85,9 @@ class Java(MergeRule):
             R(Text("import "), rdescript="Java: Import"),
         #
         SymbolSpecs.FUNCTION:
-            R(Text("TOKEN(){}") + Key("left"), rdescript="Java: Function"),
+            R(Text("TOKEN() {}") + Key("left"), rdescript="Java: Function"),
         SymbolSpecs.CLASS:
-            R(Text("class {}") + Key("left/5:2"), rdescript=""),
+            R(Text("class {}") + Key("left/5:2"), rdescript="Java: Class"),
         #
         SymbolSpecs.COMMENT:
             R(Text("//"), rdescript="Java: Add Comment"),
@@ -104,42 +107,66 @@ class Java(MergeRule):
 
         # Java specific
 
-        "it are in":                        R(Text("Arrays.asList(TOKEN).contains(TOKEN)"), rdescript="Java: In"),
-        "try states":                       R(Text("try"), rdescript="Java: Try"),
-        "arrow":                            R(Text("->"), rdescript="Java: Lambda Arrow"),
 
-        "public":                           R(Text("public "), rdescript="Java: Public"),
-        "private":                          R(Text("private "), rdescript="Java: Private"),
-        "static":                           R(Text("static "), rdescript="Java: Static"),
-        "final":                            R(Text("final "), rdescript="Java: Final"),
-        "void":                             R(Text("void "), rdescript="Java: Void"),
-
-        "cast to double":                   R(Text("(double)()")+Key("left"), rdescript="Java: Cast To Double"),
-        "cast to integer":                  R(Text("(int)()")+Key("left"), rdescript="Java: Cast To Integer"),
-
-        "new new":                          R(Text("new "), rdescript="Java: New"),
-        "integer":                          R(Text("int "), rdescript="Java: Integer"),
-        "big integer":                      R(Text("Integer "), rdescript="Java: Big Integer"),
-        "double tie":                       R(Text("double "), rdescript="Java: Double"),
-        "big double":                       R(Text("Double "), rdescript="Java: Big Double"),
-
-        "string":                           R(Text("String "), rdescript="Java: String"),
-        "boolean":                          R(Text("boolean "), rdescript="Java: Boolean"),
-        "substring":                        R(Text("substring"), rdescript="Java: Substring Method"),
-
-        "ternary":                          R(Text("()?:") + Key("left:3"), rdescript="Java: Ternary"),
-        "this":                             R(Text("this"), rdescript="Java: This"),
-        "array list":                       R(Text("ArrayList"), rdescript="Java: ArrayList"),
-
-        "continue":                         R(Text("continue"), rdescript="Java: Continue"),
-        "sue iffae":                        R(Text("if ()")+Key("left"), rdescript="Java: Short If"),
-        "sue shells":                       R(Text("else")+Key("enter"), rdescript="Java: Short Else"),
-
-        "shell iffae":                      R(Text("else if ()")+Key("left"), rdescript="Java: Else If"),
-        "throw exception":                  R(Text("throw new Exception()")+Key("left"), rdescript="Java: Throw Exception"),
-
-        "character at":                     R(Text("charAt"), rdescript="Java: Character At Method"),
-        "is instance of":                   R(Text(" instanceof "), rdescript="Java: Instance Of"),
+        "it are in":
+            R(Text("Arrays.asList(TOKEN).contains(TOKEN)"), rdescript="Java: In"),
+        "try states":
+            R(Text("try"), rdescript="Java: Try"),
+        "arrow":
+            R(Text("->"), rdescript="Java: Lambda Arrow"),
+        "public":
+            R(Text("public "), rdescript="Java: Public"),
+        "private":
+            R(Text("private "), rdescript="Java: Private"),
+        "static":
+            R(Text("static "), rdescript="Java: Static"),
+        "final":
+            R(Text("final "), rdescript="Java: Final"),
+        "void":
+            R(Text("void "), rdescript="Java: Void"),
+        "cast to double":
+            R(Text("(double)()") + Key("left"), rdescript="Java: Cast To Double"),
+        "cast to integer":
+            R(Text("(int)()") + Key("left"), rdescript="Java: Cast To Integer"),
+        "new new":
+            R(Text("new "), rdescript="Java: New"),
+        "integer":
+            R(Text("int "), rdescript="Java: Integer"),
+        "big integer":
+            R(Text("Integer "), rdescript="Java: Big Integer"),
+        "double tie":
+            R(Text("double "), rdescript="Java: Double"),
+        "big double":
+            R(Text("Double "), rdescript="Java: Big Double"),
+        "string":
+            R(Text("String "), rdescript="Java: String"),
+        "boolean":
+            R(Text("boolean "), rdescript="Java: Boolean"),
+        "substring":
+            R(Text("substring"), rdescript="Java: Substring Method"),
+        "ternary":
+            R(Text("()?:") + Key("left:3"), rdescript="Java: Ternary"),
+        "this":
+            R(Text("this"), rdescript="Java: This"),
+        "array list":
+            R(Text("ArrayList"), rdescript="Java: ArrayList"),
+        "continue":
+            R(Text("continue"), rdescript="Java: Continue"),
+        "sue iffae":
+            R(Text("if ()") + Key("left"), rdescript="Java: Short If"),
+        "sue shells":
+            R(Text("else") + Key("enter"), rdescript="Java: Short Else"),
+        "shell iffae":
+            R(Text("else if ()") + Key("left"), rdescript="Java: Else If"),
+        "throw exception":
+            R(Text("throw new Exception()") + Key("left"),
+              rdescript="Java: Throw Exception"),
+        "character at":
+            R(Text("charAt"), rdescript="Java: Character At Method"),
+        "is instance of":
+            R(Text(" instanceof "), rdescript="Java: Instance Of"),
+        "dock string":
+            R(Text("/***/")+ Key("left,left,enter"), rdescript="Java: Docstring"),
 
         "short":       R(Text("short "), rdescript="Java: short value type"),
         "library Java utilities":   R(Text("import java.util.*"), rdescript="Java: import utilities library"),
@@ -210,6 +237,9 @@ class Java(MergeRule):
              # Text("this." + str(textformat.get_formatted_text(3,1,"%(text)s")) + " = " + str(textformat.get_formatted_text(3,1,"%(text)s")) + ";") + \
              # Key("enter") + Key("right") + Key("enter:2"),
              # rdescript="Java: encapsulate string variable")
+
+
+        
 
     }
 
