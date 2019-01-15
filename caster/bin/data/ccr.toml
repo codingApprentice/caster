@@ -2,27 +2,27 @@
 "flash develop test" = true
 
 [global]
-latex = false
-sequel = false
-Java = false
-VHDL = false
-Python = false
 alphabet = true
-punctuation = true
-prolog = false
-Dart = false
-Rust = false
-Javascript = false
-HTML = false
-"C plus plus" = false
-numbers = true
-Go = false
-"C sharp" = false
-hacks = false
-navigation = true
-matlab = false
-Bash = false
 are = false
+Bash = false
+"C plus plus" = false
+"C sharp" = false
+Dart = false
+Go = false
+hacks = false
+HTML = false
+Java = false
+Javascript = false
+latex = false
+matlab = false
+navigation = true
+numbers = true
+prolog = false
+punctuation = true
+Python = false
+Rust = false
+sequel = false
+VHDL = false
 
 [selfmod]
 alias = true
