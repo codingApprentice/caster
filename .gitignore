@@ -9,7 +9,7 @@
 /caster/bin/data/recorded_macros.json
 #/caster/bin/data/settings.json
 
-*.toml
+#*.toml
 
 *.wav
 *.class
