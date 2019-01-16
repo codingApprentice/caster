@@ -1,44 +1,98 @@
-[apps]
-atom = true
-chrome = true
-cmd = true
-douglas = true
-dragon = true
-eclipse = true
-emacs = true
-explorer = true
-filedialogue = true
-firefox = true
-flashdevelop = true
-fman = true
-foxitreader = true
-gitbash = true
-gitter = true
-jetbrains = true
-kdiff3 = true
-legion = true
-mintty = true
-msvc = true
-notepadplusplus = true
-PotPlayerMini64 = true
-rainbow = true
-rstudio = true
-sqldeveloper = true
-ssms = true
-sublime = true
-totalcmd = true
-visualstudio = true
-visualstudiocode = true
-winword = true
-wish = true
-wsr = true
+[pronunciations]
+jquery = "J query"
+"c++" = "C plus plus"
 
+[paths]
+WSR_PATH = "C:/Windows/Speech/Common/sapisvr.exe"
+SETTINGS_WINDOW_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/settingswindow.py"
+CONFIGDEBUGTXT_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/configdebug.txt"
+SAVED_CLIPBOARD_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/clipboard.toml"
+MEDIA_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/media"
+DLL_PATH = "C:/NatLink/NatLink/MacroSystem/caster/lib/dll/"
+BRINGME_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/bringme.toml"
+SIKULI_COMPATIBLE_JAVA_EXE_PATH = "C:/Program Files/Java/jdk1.8.0_141/bin/java.exe"
+WXPYTHON_PATH = "C:/Python27/Lib/site-packages/wx-3.0-msw"
+SIKULI_SCRIPTS_FOLDER_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/sikuli/scripts"
+LOG_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/log.txt"
+ENGINE_PATH = "C:/Program Files (x86)/Nuance/NaturallySpeaking15/Program/natspeak.exe"
+HOMUNCULUS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/hmc/h_launch.py"
+BRINGME_DEFAULTS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/share/bringme.toml.defaults"
+SIKULI_IDE_JAR_PATH = "C:/SikuliX/sikulix.jar"
+DOUGLAS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/mouse/grids.py"
+DEFAULT_BROWSER_PATH = "C:/Program Files (x86)/Mozilla Firefox/firefox.exe"
+REMOTE_DEBUGGER_PATH = ""
+CCR_CONFIG_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/ccr.toml"
+SIKULI_SERVER_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/sikuli/scripts/xmlrpc_server.sikuli"
+LEGION_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/mouse/legion.py"
+BASE_PATH = "C:/NatLink/NatLink/MacroSystem/caster"
+REBOOT_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/reboot.bat"
+RECORDED_MACROS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/recorded_macros.toml"
+FILTER_DEFS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/user/words.txt"
+REBOOT_PATH_WSR = "C:/NatLink/NatLink/MacroSystem/caster/bin/reboot_wsr.bat"
+RAINBOW_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/mouse/grids.py"
+PYTHONW = "C:/Python27/pythonw"
+SIKULI_SCRIPTS_JAR_PATH = "C:/SikuliX/sikulix.jar"
+ALIAS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/aliases.toml"
 
 [feature_rules]
 again = true
-alias = true
-chainalias = true
 hmc = true
+chainalias = true
+alias = true
+
+[apps]
+PotPlayerMini64 = true
+firefox = true
+winword = true
+lyx = true
+visualstudiocode = true
+msvc = true
+kdiff3 = true
+filedialogue = true
+rainbow = true
+foxitreader = true
+chrome = true
+douglas = true
+emacs = true
+sqldeveloper = true
+visualstudio = true
+gitter = true
+notepadplusplus = true
+explorer = true
+mintty = true
+ssms = true
+atom = true
+fman = true
+jetbrains = true
+flashdevelop = true
+wish = true
+cmd = true
+eclipse = true
+dragon = true
+legion = true
+wsr = true
+totalcmd = true
+rstudio = true
+gitbash = true
+sublime = true
+
+[miscellaneous]
+max_ccr_repetitions = 16
+sikuli_enabled = false
+integer_remap_crash_fix = false
+atom_palette_wait = "30"
+use_aenea = false
+legion_vertical_columns = 30
+print_rdescripts = false
+dev_commands = false
+integer_remap_opt_in = false
+rdp_mode = false
+keypress_wait = 50
+history_playback_delay_secs = 1.0
+
+["one time warnings"]
+
+[nodes]
 
 [formats.HTML]
 secondary_format = [ 5, 2,]
@@ -83,64 +137,3 @@ text_format = [ 5, 0,]
 [formats.Javascript]
 secondary_format = [ 2, 1,]
 text_format = [ 3, 1,]
-
-[miscellaneous]
-atom_palette_wait = "30"
-dev_commands = false
-history_playback_delay_secs = 1.0
-integer_remap_crash_fix = false
-integer_remap_opt_in = false
-keypress_wait = 50
-legion_vertical_columns = 30
-max_ccr_repetitions = 16
-print_rdescripts = false
-rdp_mode = false
-sikuli_enabled = false
-use_aenea = false
-
-[nodes]
-
-["one time warnings"]
-
-[paths]
-ALIAS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/aliases.toml"
-BASE_PATH = "C:/NatLink/NatLink/MacroSystem/caster"
-BRINGME_DEFAULTS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/share/bringme.toml.defaults"
-BRINGME_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/bringme.toml"
-CCR_CONFIG_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/ccr.toml"
-CONFIGDEBUGTXT_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/configdebug.txt"
-DEFAULT_BROWSER_PATH = "C:/Program Files (x86)/Mozilla Firefox/firefox.exe"
-DLL_PATH = "C:/NatLink/NatLink/MacroSystem/caster/lib/dll/"
-DOUGLAS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/mouse/grids.py"
-ENGINE_PATH = "C:/Program Files (x86)/Nuance/NaturallySpeaking15/Program/natspeak.exe"
-FILTER_DEFS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/user/words.txt"
-HOMUNCULUS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/hmc/h_launch.py"
-LEGION_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/mouse/legion.py"
-LOG_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/log.txt"
-MEDIA_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/media"
-PYTHONW = "C:/Python27/pythonw"
-RAINBOW_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/mouse/grids.py"
-REBOOT_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/reboot.bat"
-REBOOT_PATH_WSR = "C:/NatLink/NatLink/MacroSystem/caster/bin/reboot_wsr.bat"
-RECORDED_MACROS_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/recorded_macros.toml"
-REMOTE_DEBUGGER_PATH = ""
-SAVED_CLIPBOARD_PATH = "C:/NatLink/NatLink/MacroSystem/caster/bin/data/clipboard.toml"
-SETTINGS_WINDOW_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/settingswindow.py"
-SIKULI_COMPATIBLE_JAVA_EXE_PATH = "C:/Program Files/Java/jdk1.8.0_141/bin/java.exe"
-SIKULI_IDE_JAR_PATH = "C:/SikuliX/sikulix.jar"
-SIKULI_SCRIPTS_FOLDER_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/sikuli/scripts"
-SIKULI_SCRIPTS_JAR_PATH = "C:/SikuliX/sikulix.jar"
-SIKULI_SERVER_PATH = "C:/NatLink/NatLink/MacroSystem/caster/asynch/sikuli/scripts/xmlrpc_server.sikuli"
-WSR_PATH = "C:/Windows/Speech/Common/sapisvr.exe"
-WXPYTHON_PATH = "C:/Python27/Lib/site-packages/wx-3.0-msw"
-
-[pronunciations]
-"c++" = "C plus plus"
-jquery = "J query"
-
-
-
-
-
-
-
