@@ -54,3 +54,7 @@ sonar-project.properties
 # Ignore User Data
 caster/bin/data
 
+# Ignore dist files
+dist
+castervoice.egg-info
+
