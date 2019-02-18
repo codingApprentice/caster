@@ -1,4 +1,4 @@
-
+from dragonfly import Key, Text, Dictation
 from castervoice.lib import control
 from castervoice.lib.actions import Key, Text
 from castervoice.lib.dfplus.merge.mergerule import MergeRule
