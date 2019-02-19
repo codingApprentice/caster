@@ -11,12 +11,12 @@ Command-module for Sql Developer
 
 from dragonfly import (Grammar, AppContext, Dictation, Key)
 
-from caster.lib import control
-from caster.lib import settings
-from caster.lib.dfplus.additions import IntegerRefST
-from caster.lib.dfplus.merge import gfilter
-from caster.lib.dfplus.merge.mergerule import MergeRule
-from caster.lib.dfplus.state.short import R
+from castervoice.lib import control
+from castervoice.lib import settings
+from castervoice.lib.dfplus.additions import IntegerRefST
+from castervoice.lib.dfplus.merge import gfilter
+from castervoice.lib.dfplus.merge.mergerule import MergeRule
+from castervoice.lib.dfplus.state.short import R
 
 
 class SQLDeveloperRule(MergeRule):
