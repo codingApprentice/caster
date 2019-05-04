@@ -78,6 +78,7 @@ class TyporaRule(MergeRule):
             R(Key("cs-m"), rdescript="Typora: Math Block"),
         "quote":
             R(Key("cs-q"), rdescript="Typora: Quote"),
+        # erroring block for brackets... invalid key
         "ordered list":
             R(Key("cs-["), rdescript="Typora: Ordered List"),
         "indent <h>":
@@ -91,6 +92,7 @@ class TyporaRule(MergeRule):
             R(Key("c-i"), rdescript="Typora: Emphasis"),
         "underline":
             R(Key("c-u"), rdescript="Typora: Underline"),
+        # erroring block for brackets... invalid key
         "code":
             R(Key("cs-`"), rdescript="Typora: Code"),
         "strike":
@@ -99,6 +101,7 @@ class TyporaRule(MergeRule):
             R(Key("c-k"), rdescript="Typora: Hyperlink"),
         "image":
             R(Key("cs-i"), rdescript="Typora: Image"),
+        # erroring block for brackets... invalid key
         "clear [format]":
             R(Key("c-\\"), rdescript="Typora: Clear Format"),
         # View
@@ -120,8 +123,9 @@ class TyporaRule(MergeRule):
             R(Key("f11"), rdescript="Typora: Toggler Fullscreen"),
         "actual size":
             R(Key("cs-0"), rdescript="Typora: Actual Size"),
-        "zoom in <n>":
-            R(Key("cs-="), rdescript="Typora: Zoom In") * Repeat(extra="n"),
+        # erroring block for brackets... invalid key
+        # "zoom in <n>":
+        #     R(Key("cs-="), rdescript="Typora: Zoom In") * Repeat(extra="n"),
         "zoom out <n>":
             R(Key("cs--"), rdescript="Typora: Zoom Out") * Repeat(extra="n"),
         "switch documnets":
