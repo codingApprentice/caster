@@ -21,6 +21,7 @@ CONFIG = utilities.load_toml_file(settings.SETTINGS["paths"]["BRINGME_PATH"])
 if not CONFIG:
     # logger.warn("Could not load bringme defaults")
     print("Could not load bringme defaults")
+    print("bringme path=",settings.SETTINGS["paths"]["BRINGME_PATH"])
 
 
 def refresh():
