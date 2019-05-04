@@ -36,12 +36,9 @@ class DragonRule(MergeRule):
         'normal mode':
             R(Playback([(["normal", "mode", "on"], 0.0)]),
               rdescript="Dragon: Normal Mode"),
-        'com on':
+        'command mode':
             R(Playback([(["command", "mode", "on"], 0.0)]),
-              rdescript="Dragon: Command Mode (On)"),
-        'com off':
-            R(Playback([(["command", "mode", "off"], 0.0)]),
-              rdescript="Dragon: Command Mode (Off)"),
+              rdescript="Dragon: Command Mode"),
         'scratch':
             R(Playback([(["scratch", "that"], 0.0)]), rdescript="Dragon: 'Scratch That'"),
         "reboot dragon":
@@ -58,7 +55,10 @@ class DragonRule(MergeRule):
         "center point":
             R(Playback([(["MouseGrid"], 0.1), (["click"], 0.0)]),
               rdescript="Mouse: Center Point"),
+        # A Natlink Command
+        "clear caster log": R(Function(utilities.clear_log), rdescript="Core: Clear Caster Log"),
     }
+
     extras = [
         Dictation("text"),
         Dictation("mim"),

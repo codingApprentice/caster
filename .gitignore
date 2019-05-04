@@ -58,3 +58,5 @@ caster/bin/data
 dist
 castervoice.egg-info
 
+/.stignore
+

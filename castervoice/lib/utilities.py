@@ -18,6 +18,7 @@ from _winreg import (CloseKey, ConnectRegistry, HKEY_CLASSES_ROOT,
     HKEY_CURRENT_USER, OpenKey, QueryValueEx)
 
 from dragonfly.windows.window import Window
+from dragonfly import Key
 
 try:  # Style C -- may be imported into Caster, or externally
     BASE_PATH = os.path.realpath(__file__).rsplit(os.path.sep + "castervoice", 1)[0]
@@ -30,6 +31,33 @@ finally:
 # checked to see when a new file name had appeared
 FILENAME_PATTERN = re.compile(r"[/\\]([\w_ ]+\.[\w]+)")
 
+from ctypes import cdll
+from win32gui import GetForegroundWindow
+
+def load_vda():
+    # https://github.com/reckoner/pyVirtualDesktopAccessor
+    # provides a 32-bit python implementation (this one).
+    # there is a 64-bit implementation at
+    # https://github.com/Ciantic/VirtualDesktopAccessor
+    vda = cdll.LoadLibrary(BASE_PATH + "/castervoice/bin/VirtualDesktopAccessor.dll")
+    return vda
+
+def move_current_window_to_desktop(n=0, follow=False):
+    vda = load_vda()
+    wndh = GetForegroundWindow()
+    vda.MoveWindowToDesktopNumber(wndh, n-1)
+    if follow:
+        vda.GoToDesktopNumber(n-1)
+
+def go_to_desktop_number(n):
+    vda = load_vda()
+    return vda.GoToDesktopNumber(n-1)
+
+def close_all_workspaces():
+    vda = load_vda()
+    total = vda.GetDesktopCount()
+    go_to_desktop_number(total)
+    Key("wc-f4/10:" + str(total-1)).execute()
 
 def window_exists(classname, windowname):
     try:
@@ -157,3 +185,19 @@ def default_browser_command():
         CloseKey(key)
         CloseKey(reg)
     return path
+
+
+def clear_log():
+    # Function to clear natlink status window
+    try:
+        import natlink
+        windows = Window.get_all_windows()
+        matching = [w for w in windows
+        if b"Messages from Python Macros" in w.title]
+        if matching:
+            handle = (matching[0].handle)
+            rt_handle = win32gui.FindWindowEx(handle, None, "RICHEDIT", None)
+            win32gui.SetWindowText(rt_handle, "")
+            return
+    except Exception as e:
+        print (e)
