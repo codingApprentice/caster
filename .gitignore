@@ -60,3 +60,8 @@ castervoice.egg-info
 
 /.stignore
 
+# Ignore tex generated files
+castervoice/doc/CasterQuickReference.aux
+castervoice/doc/CasterQuickReference.pdf
+castervoice/doc/CasterQuickReference.synctex.gz
+
