@@ -65,3 +65,6 @@ castervoice/doc/CasterQuickReference.aux
 castervoice/doc/CasterQuickReference.pdf
 castervoice/doc/CasterQuickReference.synctex.gz
 
+# Ignore Notepad++ backup files
+**/nppBackup
+
