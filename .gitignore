@@ -19,8 +19,14 @@ complexity_report*
 *.log
 *.*\#
 *.*~
+
+*.aux
+*.synctex.gz
+
+
 *.exe
 /caster/apps/wish.py
+
 
 # Ignore Rope
 .ropeproject/
