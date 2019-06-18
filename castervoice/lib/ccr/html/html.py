@@ -394,7 +394,7 @@ class HTML(MergeRule):
         "attribute hyperlink language":
             Text('hreflang=""') + Key("left:1"),
         "attribute hyperlink equivalent":
-            Text('http-equivalent=""') + Key("left:1"),
+            Text('http-equiv=""') + Key("left:1"),
         "attribute icon":
             Text('icon=""') + Key("left:1"),
         "attribute identity":
