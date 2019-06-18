@@ -196,7 +196,7 @@ class HTML(MergeRule):
             R(Text("<object >") + Key("left/10:1"), rdescript="HTML: Object | Embedded Object"),
         "parameter ":
             R(Text("<param >") + Key("left/10:1"), rdescript="HTML: Parameter"),
-        "source":
+        "tag source":
             R(Text("<source >") + Key("left/10:1"), rdescript="HTML: Source"),
         # Scripting
         "canvas":
