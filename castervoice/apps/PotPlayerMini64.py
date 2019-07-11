@@ -1,22 +1,4 @@
-#
-# This file is a command-module for Dragonfly.
-# (c) Copyright 2008 by Christo Butcher
-# Licensed under the LGPL, see <http://www.gnu.org/licenses/>
-#
-"""
-Command-module for PotPlayer
-(modified from cmd.py by codingApprentice 18/03/2018)
-
-"""
-#---------------------------------------------------------------------------
-
-from dragonfly import (Grammar, AppContext, MappingRule, Key, Text)
-
-from castervoice.lib import control
-from castervoice.lib import settings
-from castervoice.lib.dfplus.merge import gfilter
-from castervoice.lib.dfplus.merge.mergerule import MergeRule
-from castervoice.lib.dfplus.state.short import R
+from castervoice.lib.imports import *
 
 
 class PotPlayerRule(MergeRule):
@@ -86,16 +68,6 @@ class PotPlayerRule(MergeRule):
     defaults = {}
 
 
-#---------------------------------------------------------------------------
-
 context = AppContext(executable="PotPlayerMini64", title="PotPlayer")
-grammar = Grammar("PotPlayerMini64", context=context)
-if settings.SETTINGS["apps"]["PotPlayerMini64"]:
-    if settings.SETTINGS["miscellaneous"]["rdp_mode"]:
-        control.nexus().merger.add_global_rule(PotPlayerRule())
-        print("added PotPlayerMini64")
-    else:
-        rule = PotPlayerRule(name="PotPlayer")
-        gfilter.run_on(rule)
-        grammar.add_rule(rule)
-        grammar.load()
+control.non_ccr_app_rule(PotPlayerRule(), context=context)
+

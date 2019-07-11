@@ -1,22 +1,4 @@
-#
-# This file is a command-module for Dragonfly.
-# (c) Copyright 2008 by Christo Butcher
-# Licensed under the LGPL, see <http://www.gnu.org/licenses/>
-#
-"""
-Command-module for Sql Developer
-
-"""
-#---------------------------------------------------------------------------
-
-from dragonfly import (Grammar, AppContext, Dictation, Key)
-
-from castervoice.lib import control
-from castervoice.lib import settings
-from castervoice.lib.dfplus.additions import IntegerRefST
-from castervoice.lib.dfplus.merge import gfilter
-from castervoice.lib.dfplus.merge.mergerule import MergeRule
-from castervoice.lib.dfplus.state.short import R
+from castervoice.lib.imports import *
 
 
 class SQLDeveloperRule(MergeRule):
@@ -34,16 +16,6 @@ class SQLDeveloperRule(MergeRule):
     defaults = {"n": 1}
 
 
-#---------------------------------------------------------------------------
-
 context = AppContext(executable="sqldeveloper64W", title="SQL Developer")
-grammar = Grammar("Sql Developer", context=context)
+control.non_ccr_app_rule(SQLDeveloperRule(), context=context)
 
-if settings.SETTINGS["apps"]["sqldeveloper"]:
-    if settings.SETTINGS["miscellaneous"]["rdp_mode"]:
-        control.nexus().merger.add_global_rule(SQLDeveloperRule())
-    else:
-        rule = SQLDeveloperRule(name="sql developer")
-        gfilter.run_on(rule)
-        grammar.add_rule(rule)
-        grammar.load()
