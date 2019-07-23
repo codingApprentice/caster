@@ -15,8 +15,11 @@ class MinttyRule(MergeRule):
         "make directory":
             R(Text("mkdir "), rdescript="git bash: Make directory"),
         "open dragonfly":
-            R(Text(r"cd /e/GitHub/dragonfly") + Key("enter"),
+            R(Text(r"cd /c/dragonfly") + Key("enter"),
               rdescript="git bash: Go To dragonfly repository"),
+        "install dragonfly":
+            R(Text(r"python setup.py install") + Key("enter"),
+              rdescript="git bash: install dragonfly"),
         "open Jpractice":
             R(Text(r"cd /e/GitHub/javaPractice") + Key("enter"),
               rdescript="git bash: Go To javaPractice"),
